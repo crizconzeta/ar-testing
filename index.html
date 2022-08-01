@@ -21,13 +21,10 @@
             <a-box position='0 0.5 0' color="blue"></a-box>
         </a-marker>
 
-         <a-marker type='barcode' value='2'>
+         <a-marker id='box2' type='barcode' value='2'>
             <a-box position='-0.75 0.5 0' color="blue"></a-box>
-<a-entity
-  geometry="primitive: plane; height: auto; width: auto"
-  material="color: blue"
-  text="width: 4; value: This text will be 4 units wide."></a-entity>
-            </a-marker>
+            <a-text value="Hello, World!"></a-text>
+         </a-marker>
             
         <a-marker id="animated-marker" type='barcode' value='6'>
             <a-entity
@@ -38,6 +35,10 @@
 
         <!-- use this <a-entity camera> to support multiple-markers, otherwise use <a-marker-camera> instead of </a-marker> -->
         <a-entity camera></a-entity>
+        <a-entity id='animated-marker' look-at='[camera]'></a-entity>
+        <a-entity id='box2' look-at='[camera]'></a-entity>
+
+            
         </a-scene>
     </body>
 </html>
