@@ -14,7 +14,7 @@
         <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;'>
 
         <a-assets>
-            <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playground/models/CesiumMan.gltf"></a-asset-item>
+            <a-asset-item id="animated-asset" src="https://raw.githubusercontent.com/nicolocarpignoli/nicolocarpignoli.github.io/master/ar-playgro<a-entityund/models/CesiumMan.gltf"></a-asset-item>
         </a-assets>
 
         <a-marker type='barcode' value='1'>
@@ -23,8 +23,11 @@
 
          <a-marker type='barcode' value='2'>
             <a-box position='-0.75 0.5 0' color="blue"></a-box>
-             <a-text value="Now Interactable" geometry="primitive:plane"></a-text>
-        </a-marker>
+<a-entity
+  geometry="primitive: plane; height: auto; width: auto"
+  material="color: blue"
+  text="width: 4; value: This text will be 4 units wide."></a-entity>
+            </a-marker>
             
         <a-marker id="animated-marker" type='barcode' value='6'>
             <a-entity
